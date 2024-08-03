@@ -30,9 +30,14 @@
         </nav>
     </header>
     <main class="container my-4 main">
-        <section class="hero text-center">
+        <section class="hero text-center" x-data="{ open: false }">
             <img src="images/acoustic-guitar.jpg" class="img-fluid" alt="Acoustic Guitar">
             <h1>Acoustic Guitars</h1>
+            <button @click="open = !open" class="btn btn-primary mt-3">Toggle Info</button>
+            <div x-show="open" class="mt-3">
+                <h2>More Information</h2>
+                <p>Here is some additional information about acoustic guitars.</p>
+            </div>
         </section>
         <section class="content mt-4">
             <h2>History of Acoustic Guitars</h2>
@@ -49,7 +54,8 @@
         <p>Follow us on social media!</p>
     </footer>
     <script src="scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/cdn@3.5.2" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

@@ -30,10 +30,15 @@
         </nav>
     </header>
     <main class="container my-4 main">
-        <section class="hero text-center">
+        <section class="hero text-center" x-data="{ open: false }">
             <img src="images/hero-guitar.jpg" class="img-fluid" alt="A Cool Guitar">
             <h1>Welcome to Guitar Info Hub!</h1>
             <p>Explore our articles and guides on all things guitar.</p>
+            <button @click="open = !open" class="btn btn-primary mt-3">Toggle Info</button>
+            <div x-show="open" class="mt-3">
+                <h2>More Information</h2>
+                <p>Here is some additional information about guitars.</p>
+            </div>
         </section>
         <section class="featured mt-4">
             <h2>Latest Articles</h2>
